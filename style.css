@@ -1,0 +1,138 @@
+:root {
+    --color1:hsl(215, 51%, 70%);/*Soft blue*/
+    --color2:hsl(178, 100%, 50%);/*Cyan*/
+    --color3:hsl(217, 54%, 11%);/*Very dark blue (main BG)*/
+    --color4:hsl(216, 50%, 16%);/*Very dark blue (card BG)*/
+    --color5:hsl(215, 32%, 27%);/*Very dark blue (line)*/
+    --radius:8px;
+}
+body {
+    display:grid;
+    place-items: center;
+    height:100vh;
+    margin: 0;
+    background-color: var(--color3);
+    font-family: "Outfit", sans-serif;
+}
+.attribution {
+    position: absolute;
+    bottom: 0;
+    right:0;
+    font-size: 1rem;
+    text-align: center
+}
+.attribution a {color: hsl(228, 45%, 44%)}
+
+div.card {
+    display:flex;
+    flex-direction: column;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    background-color: var(--color4);
+    width: 300px;
+    min-height: 300px;
+    border-radius: 18px;
+    box-shadow: 5px 15px 50px rgba(0, 0, 0, 0.4);
+}
+.illustration {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+.image {
+    border-radius: var(--radius);
+    display: block;
+    width: 100%;
+    height:auto
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    border-radius: var(--radius);
+    background-color: var(--color2);
+}
+.illustration:hover .overlay {
+    opacity: .5;
+    border-radius: var(--radius);
+}
+.icon {
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.title {
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    padding: 1.5rem 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+.title:hover {
+    color: var(--color2);
+}
+.description {
+    text-align: left;
+    color: var(--color1);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    
+}
+div.counters {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+}
+.value {
+    color: var(--color2);
+    font-weight: 400;
+    display:flex;
+    align-items: center;
+}
+.value img {
+    margin-right: .3rem;
+}
+.time {
+    color: var(--color1);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+.time img {
+    margin-right: .3rem;
+}
+.creation {
+    display:flex;
+    align-items: center;
+    border-top: 1px solid var(--color5);
+    color: var(--color1);
+    padding-top: .5rem;
+}
+img.creation {
+    padding:0;
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+div.creation a {
+    text-decoration: none;
+    color: white;
+}
+div.creation a:hover {
+    color: var(--color2);
+}
